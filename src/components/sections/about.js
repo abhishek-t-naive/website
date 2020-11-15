@@ -38,7 +38,7 @@ const StyledText = styled.div`
         content: '▹';
         position: absolute;
         left: 0;
-        color: var(--green);
+        color: var(--red);
         font-size: var(--fz-sm);
         line-height: 12px;
       }
@@ -60,7 +60,7 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background-color: var(--transparent);
 
     &:hover,
     &:focus {
@@ -100,12 +100,12 @@ const StyledPic = styled.div`
     &:before {
       top: 0;
       left: 0;
-      background-color: var(--navy);
+      background-color: var(--transparent);
       mix-blend-mode: screen;
     }
 
     &:after {
-      border: 2px solid var(--green);
+      border: 2px solid var(--black);
       top: 20px;
       left: 20px;
       z-index: -1;
@@ -132,7 +132,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'HTML & (S)CSS', 'React', 'Vue', 'Node.js', 'WordPress'];
+  const skills = [
+    'C/C++',
+    'Python',
+    'Verilog',
+    'System Verilog',
+    'ML',
+    'Gem5',
+    'orCAD PSpice',
+    'Chisel HDL',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -141,22 +150,22 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
+            <p>Hello! I'm Abhishek, a Hardware Engineer based in Bengaluru, India.</p>
 
             <p>
-              I enjoy creating things that live on the internet, whether that be websites,
-              applications, or anything in between. My goal is to always build products that provide
-              pixel-perfect, performant experiences.
+              I work on developing state-of-the-art low-power, highly efficient hardware for image
+              recognition.
             </p>
 
             <p>
               Shortly after graduating from{' '}
-              <a href="https://www.ccis.northeastern.edu">Northeastern University</a>, I joined the
-              engineering team at <a href="https://www.upstatement.com">Upstatement</a> where I work
-              on a wide variety of interesting and meaningful projects on a daily basis.
+              <a href="http://dtu.ac.in/">Delhi Technological University</a>, I joined the{' '}
+              <a href="http://cadl.iisc.ernet.in/cadlab/">Computer Aided Design Laboratory</a> at
+              Indian Institute of Science and later joined the Device & Systems Team at{' '}
+              <a href="https://research.samsung.com/sri-b">Samsung R&D, Bangalore</a>.
             </p>
 
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>Here are a few skills that I've aquired over the years:</p>
           </div>
 
           <ul className="skills-list">

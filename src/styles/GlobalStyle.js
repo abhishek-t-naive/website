@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
     --light-slate: #a8b2d1;
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
+		--black: #000000;
+    --transparent: #ffffff;
     --green: #64ffda;
     --green-tint: rgba(100, 255, 218, 0.1);
 
@@ -72,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
+    background-color: var(--transparent);
     color: var(--slate);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
@@ -249,14 +251,14 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
-    color: inherit;
+    color: var(--black);
     position: relative;
     transition: var(--transition);
     cursor: pointer;
 
     &:hover,
     &:focus {
-      color: var(--green);
+      color: var(--black);
     }
 
     &.inline-link {
